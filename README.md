@@ -51,7 +51,7 @@ npm install -g @sunodo/cli
 
 ## Building the application
 
-To build an application simply run:
+To build an application, run:
 
 ```
 sunodo build
