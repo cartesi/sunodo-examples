@@ -1,6 +1,6 @@
-# Echo Python dApp
+# Fortune dApp
 
-This dApp represents a minimalistic Cartesi Rollups application that simply copies (or "echoes") each input received as a corresponding output notice. This dApp's back-end is written in Python.
+This dApp displays random quotes from a set of predefined lists. The backend is written in Python
 
 ## Building the application
 
@@ -10,7 +10,7 @@ To build the application, run:
 sunodo build
 ```
 
-A Cartesi Machine snapshot will be created:
+You should see a Cartesi Machine snapshot output similar to this:
 
 ```
          .
@@ -81,8 +81,15 @@ For local testing, select `Foundry` which gives you mock and test faucets to sub
 ? Account 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 9999.969170031383970357 ETH
 ? DApp address 0x70ac08179605AF2D9e75782b8DEcDD3c22aA4D0C
 ? Input String encoding
-? Input (as string) Hello world, this is the echo-python dApp!
+? Input (as string) Hello world, this is my first dApp
 ✔ Input sent: 0xd30150ee888a2bbf6b491812ee9ca28cb5754381eba3415ce4087322768c191f
+```
+
+You should see this notice in your node:
+
+```
+949fc4c3-validator-1  | INFO:__main__:Received input: Hello world, this is my first dApp
+949fc4c3-validator-1  | INFO:__main__:Adding notice with payload: 'Received input: Hello world, this is my first dApp. This was the quote You'll feel much better once you've given up hope.
 ```
 
 Check [this documentation](../README.md/#sending-inputs-to-running-applications) for a comprehensive list of input types that a dApp can receive.

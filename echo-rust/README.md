@@ -1,10 +1,6 @@
-# Echo TypeScript dApp
+# Echo Rust dApp
 
-This dApp implements the same behavior as the [Echo Python dApp](../echo-python/), but with a back-end written in TypeScript.
-
-This can be used as a template for TypeScript Cartesi DApps. It uses node to execute the backend application.
-
-The application entrypoint is the `src/index.ts` file. It is bundled with [esbuild](https://esbuild.github.io), but any bundler can be used.
+This dApp implements the same behavior as the [Echo Python dApp](../echo-python/), but with a back-end written in Rust.
 
 ## Building the application
 
@@ -45,7 +41,7 @@ For local testing, select `Foundry` which gives you mock and test faucets to sub
 ? Account 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 9999.969170031383970357 ETH
 ? DApp address 0x70ac08179605AF2D9e75782b8DEcDD3c22aA4D0C
 ? Input String encoding
-? Input (as string) Hello world, this is the echo-ts dApp!
+? Input (as string) Hello world, this is the echo-rust dApp!
 ✔ Input sent: 0xd30150ee888a2bbf6b491812ee9ca28cb5754381eba3415ce4087322768c191f
 ```
 

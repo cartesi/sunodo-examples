@@ -1,6 +1,6 @@
-# Echo Python dApp
+# Calculator dApp
 
-This dApp represents a minimalistic Cartesi Rollups application that simply copies (or "echoes") each input received as a corresponding output notice. This dApp's back-end is written in Python.
+The Calculator dApp is a simple mathematical expression evaluator that illustrates how to incorporate a pure Python dependency into a Cartesi dApps.
 
 ## Building the application
 
@@ -10,7 +10,7 @@ To build the application, run:
 sunodo build
 ```
 
-A Cartesi Machine snapshot will be created:
+You should see a Cartesi Machine snapshot output similar to this:
 
 ```
          .
@@ -27,7 +27,7 @@ A Cartesi Machine snapshot will be created:
 [INFO  rollup_http_server::http_service] starting http dispatcher http service!
 [INFO  actix_server::builder] starting 1 workers
 [INFO  actix_server::server] Actix runtime found; starting in Actix runtime
-[INFO  rollup_http_server::dapp_process] starting dapp: python3 dapp.py
+[INFO  rollup_http_server::dapp_process] starting dapp: python3 calculator.py
 INFO:__main__:HTTP rollup_server url is http://127.0.0.1:5004
 INFO:__main__:Sending finish
 
@@ -81,8 +81,17 @@ For local testing, select `Foundry` which gives you mock and test faucets to sub
 ? Account 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 9999.969170031383970357 ETH
 ? DApp address 0x70ac08179605AF2D9e75782b8DEcDD3c22aA4D0C
 ? Input String encoding
-? Input (as string) Hello world, this is the echo-python dApp!
+? Input (as string) 3 + 5 * 10
 ✔ Input sent: 0xd30150ee888a2bbf6b491812ee9ca28cb5754381eba3415ce4087322768c191f
+```
+
+It will evaluate the mathematical expression and add the outcome as a notice:
+
+```
+43272d70-validator-1  | INFO:__main__:Received finish status 200
+43272d70-validator-1  | INFO:__main__:Received advance request data {'metadata': {'msg_sender': '0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266', 'epoch_index': 0, 'input_index': 0, 'block_number': 9, 'timestamp': 1701764544}, 'payload': '0x332b352a3130'}
+43272d70-validator-1  | INFO:__main__:Received input: 3+5*10
+43272d70-validator-1  | INFO:__main__:Adding notice with payload: '53'
 ```
 
 Check [this documentation](../README.md/#sending-inputs-to-running-applications) for a comprehensive list of input types that a dApp can receive.
