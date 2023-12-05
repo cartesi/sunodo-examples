@@ -1,4 +1,5 @@
 # Calculator dApp
+
 The Calculator dApp is a simple mathematical expression evaluator that illustrates how to incorporate a pure Python dependency into a Cartesi dApps.
 
 ## Building the application
@@ -36,7 +37,6 @@ Cycles: 2801607569
 Storing machine: please wait
 ```
 
-
 ## Running the application
 
 This executes a Cartesi node for the application previously built with `sunodo build`.
@@ -46,10 +46,11 @@ sunodo run
 ```
 
 It should print this output:
+
 ```
  ✔ Network 949fc4c3_default                       Created                                                                                                                                              0.0s
  ✔ Volume "949fc4c3_blockchain-data"              Created                                                                                                                                              0.0s
- ✔ Volume "949fc4c3_traefik-conf"                 Created                                           
+ ✔ Volume "949fc4c3_traefik-conf"                 Created
 949fc4c3-prompt-1     | Anvil running at http://localhost:8545
 949fc4c3-prompt-1     | GraphQL running at http://localhost:8080/graphql
 949fc4c3-prompt-1     | Inspect running at http://localhost:8080/inspect/
@@ -57,10 +58,9 @@ It should print this output:
 949fc4c3-prompt-1     | Press Ctrl+C to stop the node
 ```
 
-
 ## Interacting with the application
 
-You can use the `sunodo send` command to send input payloads to your applications. 
+You can use the `sunodo send` command to send input payloads to your applications.
 
 With your node running, open a new terminal tab. You can send a generic input to your application as follows:
 
@@ -68,7 +68,7 @@ With your node running, open a new terminal tab. You can send a generic input to
  sunodo send generic
 ```
 
-For local testing, select `Foundary` which gives you mock and test faucets to submit transactions:
+For local testing, select `Foundry` which gives you mock and test faucets to submit transactions:
 
 ```
 > sunodo send generic
@@ -94,6 +94,4 @@ It will evaluate the mathematical expression and add the outcome as a notice:
 43272d70-validator-1  | INFO:__main__:Adding notice with payload: '53'
 ```
 
-
 Check [this documentation](../README.md/#sending-inputs-to-running-applications) for a comprehensive list of input types that a dApp can receive.
-

@@ -35,7 +35,7 @@ npm install -g @sunodo/cli
 
 ### Linux
 
-You users can either use [Homebrew on Linux](https://docs.brew.sh/Homebrew-on-Linux), or install Sunodo with:
+You can either use [Homebrew on Linux](https://docs.brew.sh/Homebrew-on-Linux), or install Sunodo with:
 
 ```
 npm install -g @sunodo/cli
@@ -96,6 +96,17 @@ This executes a Cartesi node for the application previously built with `sunodo b
 sunodo run
 ```
 
+The `sunodo run` command should print this output:
+
+```
+43272d70-prompt-1     | Anvil running at http://localhost:8545
+43272d70-prompt-1     | GraphQL running at http://localhost:8080/graphql
+43272d70-prompt-1     | Inspect running at http://localhost:8080/inspect/
+43272d70-prompt-1     | Explorer running at http://localhost:8080/explorer/
+43272d70-prompt-1     | Press Ctrl+C to stop the node
+```
+
+
 ### No backend mode
 
 Sunodo run also supports running a node without your application backend packaged as a Cartesi machine.
@@ -110,7 +121,7 @@ In this case, your application can be executed on the host without being compile
 
 - **Sandbox Restrictions**: In `--no-backend` mode, the application won't run within the Cartesi machine's sandbox, enabling operations that are otherwise restricted.
 
-- **API Compatibility**: This mode is compatible only with applications using the Cartesi Rollups HTTP API, not those using the low-level API.
+- **API Compatibility**: This mode is compatible only with applications using the Cartesi Rollups HTTP API, not those using the low-level API like the [C++ low-level dApp](./echo-low-level/)
 
 - **Performance Impact**: Expect lower performance inside a Cartesi machine compared to running on the host.
 
@@ -118,7 +129,7 @@ When launching a node with the `--no-backend` you must then start your applicati
 
 ### Verbosity
 
-By default, the Cartesi node works in non-verbose mode, providing logs only from your backend application. For more information, use the `--verbose` command option.
+By default, the Cartesi node runs in non-verbose mode, providing logs only from your backend application. For more information, use the `--verbose` command option.
 
 ```
 sunodo run --verbose
@@ -229,7 +240,7 @@ Send inputs with any payload format. This is suitable for specialized input requ
 sunodo send generic
 ```
 
-The encoding of the payload can be specified with the `--input-encoding option`. Supported encodings include:
+The encoding of the payload can be specified with the `--input-encoding` option. Supported encodings include:
 
 - **hex**: Parses user input as a hex-string and converts it to bytes.
 - **string**: Converts user input from a UTF-8 string to bytes.

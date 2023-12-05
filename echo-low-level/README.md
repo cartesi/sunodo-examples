@@ -1,9 +1,8 @@
 # Echo Low-Level dApp
 
-This example implements the same behavior as the [Echo dApp written in Python](../echo-python/), but here the back-end is written in C++ and uses the low-level Cartesi Rollup API instead of the HTTP API. 
+This example implements the same behavior as the [Echo dApp written in Python](../echo-python/), but here the back-end is written in C++ and uses the low-level Cartesi Rollup API instead of the HTTP API.
 
 As the other example, the dApp simply copies (or "echoes") each input received as a corresponding output notice.
-
 
 ## Building the application
 
@@ -13,8 +12,6 @@ To build the application, run:
 sunodo build
 ```
 
-
-
 ## Running the application
 
 This executes a Cartesi node for the application previously built with `sunodo build`.
@@ -23,10 +20,9 @@ This executes a Cartesi node for the application previously built with `sunodo b
 sunodo run
 ```
 
-
 ## Interacting with the application
 
-You can use the `sunodo send` command to send input payloads to your applications. 
+You can use the `sunodo send` command to send input payloads to your applications.
 
 With your node running, open a new terminal tab. You can send a generic input to your application as follows:
 
@@ -34,7 +30,7 @@ With your node running, open a new terminal tab. You can send a generic input to
  sunodo send generic
 ```
 
-For local testing, select `Foundary` which gives you mock and test faucets to submit transactions:
+For local testing, select `Foundry` which gives you mock and test faucets to submit transactions:
 
 ```
 > sunodo send generic
@@ -50,6 +46,5 @@ For local testing, select `Foundary` which gives you mock and test faucets to su
 ? Input (as string) Hello world, this is the echo-low-level dApp!
 ✔ Input sent: 0xd30150ee888a2bbf6b491812ee9ca28cb5754381eba3415ce4087322768c191f
 ```
-
 
 Check [this documentation](../README.md/#sending-inputs-to-running-applications) for a comprehensive list of input types that a dApp can receive.
