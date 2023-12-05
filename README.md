@@ -251,7 +251,7 @@ This dApp displays random quotes from a set of predefined lists. The backend is 
 
 A basic "hello world" dApp written in Python that simply copies each input received as a corresponding output notice.
 
-### 3. [Echo C++ ](./echo-cpp)
+### 3. [Echo C++ dApp](./echo-cpp)
 
 Implements the same behavior as the [Echo Python dApp](#2-echo-python-dapp) above, but with a back-end written in C++.
 
@@ -263,15 +263,15 @@ Implements the same behavior as the [Echo Python dApp](#2-echo-python-dapp) abov
 
 Implements the same behavior as the [Echo Python dApp](#2-echo-python-dapp) above, but with a back-end written in Lua.
 
-### 6. [Echo JS](./echo-js)
+### 6. [Echo JS dApp](./echo-js)
 
 Implements the same behavior as the [Echo Python dApp](#2-echo-python-dapp) above, but with a back-end written in JavaScript.
 
-### 7. [Echo TS](./echo-ts)
+### 7. [Echo TS dApp](./echo-ts)
 
 Implements the same behavior as the [Echo Python dApp](#2-echo-python-dapp) above, but with a back-end written in TypeScript.
 
-### 8. [Echo Low-Level](./echo-low-level)
+### 8. [Echo Low-Level dApp](./echo-low-level)
 
 Implements the same behavior as the [Echo Python dApp](#2-echo-python-dapp) above, but with a back-end written in C++ using the low-level Cartesi Rollups API.
 

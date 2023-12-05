@@ -11,7 +11,7 @@ To build the application, run:
 sunodo build
 ```
 
-You should see a Cartesi Machine snapshot output similar to this:
+A Cartesi Machine snapshot will be created:
 
 ```
          .
@@ -85,13 +85,6 @@ For local testing, select `Foundary` which gives you mock and test faucets to su
 ? Input String encoding
 ? Input (as string) Hello world, this is the echo-python dApp!
 ✔ Input sent: 0xd30150ee888a2bbf6b491812ee9ca28cb5754381eba3415ce4087322768c191f
-```
-
-You should see this notice in your running node:/
-
-```
-949fc4c3-validator-1  | INFO:__main__:Received input: Hello world, this is my first dApp
-949fc4c3-validator-1  | INFO:__main__:Adding notice with payload: 'Received input: Hello world, this is the echo-python dApp!' .
 ```
 
 Check [this documentation](../README.md/#sending-inputs-to-running-applications) for a comprehensive list of input types that a dApp can receive.
