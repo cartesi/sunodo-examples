@@ -49,6 +49,30 @@ Install [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) and the Ub
 npm install -g @sunodo/cli
 ```
 
+
+## Creating an application
+
+Use the `sunodo create` command to quickly start a Cartesi dApp from scratch. It sets up everything you need with template code.
+
+Here are the available templates:
+
+- `cpp`: A template for C++ development.
+- `cpp-low-level`: C++ template using the low level API, instead of the HTTP server
+- `go`: Go lang template
+- `javascript`: A node.js 20 template tailored for JavaScript developers
+- `lua`: Lua 5.4 template
+- `python`: python 3 template
+- `ruby`: ruby template
+- `rust`: rust template
+- `typescript`: TypeScript template
+
+To create a new application from a basic Python template, run:
+
+```
+> sunodo create dapp-name --template python
+✔ Application created at dapp-name
+```
+
 ## Building the application
 
 To build an application, run:
@@ -254,46 +278,38 @@ sunodo send generic --input-encoding hex
 
 ## Example dApps
 
-### 1. [Fortune dApp](./fortune-dapp)
-
-This dApp displays random quotes from a set of predefined lists. The backend is written in Python
-
-### 2. [Echo Python dApp](./echo-python)
+### 1. [Echo Python dApp](./echo-python)
 
 A basic "hello world" dApp written in Python that simply copies each input received as a corresponding output notice.
 
-### 3. [Echo C++ dApp](./echo-cpp)
+### 2. [Echo C++ dApp](./echo-cpp)
 
 Implements the same behavior as the [Echo Python dApp](#2-echo-python-dapp) above, but with a back-end written in C++.
 
-### 4. [Echo Rust ](./echo-rust)
+### 3. [Echo Rust ](./echo-rust)
 
 Implements the same behavior as the [Echo Python dApp](#2-echo-python-dapp) above, but with a back-end written in Rust.
 
-### 5. [Echo Lua dApp](./echo-lua)
+### 4. [Echo Lua dApp](./echo-lua)
 
 Implements the same behavior as the [Echo Python dApp](#2-echo-python-dapp) above, but with a back-end written in Lua.
 
-### 6. [Echo JS dApp](./echo-js)
+### 5. [Echo JS dApp](./echo-js)
 
 Implements the same behavior as the [Echo Python dApp](#2-echo-python-dapp) above, but with a back-end written in JavaScript.
 
-### 7. [Echo TS dApp](./echo-ts)
+### 6. [Echo TS dApp](./echo-ts)
 
 Implements the same behavior as the [Echo Python dApp](#2-echo-python-dapp) above, but with a back-end written in TypeScript.
 
-### 8. [Echo Low-Level dApp](./echo-low-level)
+### 7. [Echo Low-Level dApp](./echo-low-level)
 
 Implements the same behavior as the [Echo Python dApp](#2-echo-python-dapp) above, but with a back-end written in C++ using the low-level Cartesi Rollups API.
 
-### 9. [Calculator dApp](./calculator)
-
-The Calculator dApp is a simple mathematical expression evaluator that illustrates how to incorporate a pure Python dependency into a Cartesi dApps.
-
-### 10. [Echo Ruby dApp](./echo-ruby)
+### 8. [Echo Ruby dApp](./echo-ruby)
 
 Implements the same behavior as the [Echo Python dApp](#2-echo-python-dapp) above, but with a back-end written in Ruby.
 
-### 11. [Echo Go dApp](./echo-go)
+### 9. [Echo Go dApp](./echo-go)
 
 Implements the same behavior as the [Echo Python dApp](#2-echo-python-dapp) above, but with a back-end written in Go.
